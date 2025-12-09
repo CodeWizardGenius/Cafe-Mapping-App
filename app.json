@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.cafediscovery.app"
+      "bundleIdentifier": "com.cafediscovery.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCX27Ai6PlGxCxFZ-YpoSX9CoXMLRHM7dU"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +27,12 @@
       "package": "com.cafediscovery.app",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCX27Ai6PlGxCxFZ-YpoSX9CoXMLRHM7dU"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -35,7 +43,8 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
-      ]
+      ],
+      "react-native-maps"
     ]
   }
 }

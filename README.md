@@ -30,10 +30,7 @@ Here's the JSON structure used for cafe data:
   {
     "id": "1",
     "name": "Brew House Cafe",
-    "coordinates": {
-      "latitude": 41.0082,
-      "longitude": 28.9784
-    },
+    "coordinates": { "latitude": 41.0082, "longitude": 28.9784 },
     "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     "description": "Cozy cafe with excellent pour-over coffee options."
   },
@@ -146,4 +143,14 @@ If Metro bundler fails to start or gets stuck:
 kill $(lsof -t -i:8081)
 npm start -- --reset-cache
 ```
-# G-rev-18-Cafe-Mapping-App-.pdf
+
+## Screenshots
+
+Screenshots can be added to the assets folder.
+
+## Additional Notes
+
+- The map screen works in full width and height.
+- When a marker is clicked, the Gorhom Bottom Sheet opens.
+- When the bottom sheet is closed, the selection is reset.
+- App icon and splash definitions are in the `app.json` file.

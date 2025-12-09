@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { Image, Text, View } from "react-native";
 import BottomSheet, { BottomSheetBackdrop } from "@gorhom/bottom-sheet";
 import { Cafe } from "../types";
+import { tw } from "nativewind";
 
 interface CafeBottomSheetProps {
   cafe: Cafe | null;
@@ -52,15 +53,15 @@ const CafeBottomSheet: React.FC<CafeBottomSheetProps> = ({ cafe, onClose }) => {
       backdropComponent={renderBackdrop}
       enablePanDownToClose
     >
-      <View className="flex-1 p-4">
+      <View style={tw`flex-1 p-4 items-center justify-center`}>
         <Image
           source={{ uri: cafe.image }}
-          className="w-full h-32 rounded-lg mb-4"
+          style={tw`w-full h-32 rounded-lg mb-4`}
           resizeMode="cover"
         />
-        <Text className="text-xl font-bold mb-2">{cafe.name}</Text>
+        <Text style={tw`text-xl font-bold mb-2`}>{cafe.name}</Text>
         {cafe.description && (
-          <Text className="text-gray-600">{cafe.description}</Text>
+          <Text style={tw`text-gray-500`}>{cafe.description}</Text>
         )}
       </View>
     </BottomSheet>
